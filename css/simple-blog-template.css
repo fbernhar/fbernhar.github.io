@@ -21,7 +21,12 @@ footer {
 /* navigation 
 nav {
     text-transform: uppercase;
-}*/
+}
+
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+}
 
 .navbar-inverse .navbar-brand {
     color: white;
