@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuzz Face Workshop</title>
+  <style>
+    body {
+      margin: 0;
+      background: #1e1f29;
+      color: #f2f2f2;
+      font-family: "Courier New", Courier, monospace;
+      line-height: 1.35;
+      font-size: 20px;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 18px 14px 40px 14px;
+    }
+
+    h1, h2, h3 {
+      font-size: 1em;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .ascii-title {
+      font-family: "Courier New", Courier, monospace;
+      font-size: clamp(10px, 2vw, 18px);
+      line-height: 1.05;
+      white-space: pre;
+      overflow-x: auto;
+      margin: 0 0 32px 0;
+    }
+
+    .title {
+      font-size: 1.1em;
+      margin-bottom: 2px;
+    }
+
+    .underline {
+      margin-bottom: 28px;
+      white-space: pre;
+    }
+
+    .section {
+      margin-bottom: 28px;
+    }
+
+    p {
+      margin: 0 0 18px 0;
+    }
+
+    ul {
+      margin: 0 0 18px 24px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #f2f2f2;
+      text-decoration: underline;
+    }
+
+    pre {
+      margin: 18px 0;
+      white-space: pre-wrap;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1em;
+      line-height: 1.25;
+    }
+
+    .small {
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="section">
+      <pre class="ascii-title">
+      ███████╗██╗   ██╗███████╗███████╗
+      ██╔════╝██║   ██║╚══███╔╝╚══███╔╝
+      █████╗  ██║   ██║  ███╔╝   ███╔╝ 
+      ██╔══╝  ██║   ██║ ███╔╝   ███╔╝  
+      ██║     ╚██████╔╝███████╗███████╗
+      ╚═╝      ╚═════╝ ╚══════╝╚══════╝
+      
+        ███████╗ █████╗  ██████╗███████╗
+        ██╔════╝██╔══██╗██╔════╝██╔════╝
+        █████╗  ███████║██║     █████╗  
+        ██╔══╝  ██╔══██║██║     ██╔══╝  
+        ██║     ██║  ██║╚██████╗███████╗
+        ╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝
+      </pre>
+
+      <div class="title">KiCad workshop</div>
+      <div class="underline">===============</div>
+
+      <p>
+        A friendly approach to KiCad, circuit simulation,
+        and PCB design, using the classic Fuzz Face pedal as an example project.
+      </p>
+
+      <p>
+        We will draw the schematic, simulate the circuit, explore how the fuzz effect
+        works, create a PCB layout, and export the final files for manufacturing.
+
+      </p>
+    </div>
+
+    <div class="section">
+      <div>Date</div>
+      <div class="underline">----</div>
+
+      <p>
+        Date: [20.06.2026]<br>
+        Time: [11:00]<br>
+        Place: [ add location here ]
+      </p>
+    </div>
+
+    <div class="section">
+      <div>Repository</div>
+      <div class="underline">----------</div>
+
+      <p>
+        Workshop files, KiCad project, documentation, and material can be found here:
+      </p>
+
+      <p>
+        <a href="https://github.com/fbernhar/pub_fuzzface/tree/main/src/kicad">
+          https://github.com/fbernhar/pub_fuzzface/tree/main/src/kicad
+        </a>
+      </p>
+    </div>
+
+    <div class="section">
+      <div>For whom is this workshop?</div>
+      <div class="underline">--------------------------</div>
+
+      <p>
+        This workshop is for:
+      </p>
+
+      <ul>
+        <li>people who never used KiCad before</li>
+        <li>people interested in electronics or guitar pedals</li>
+        <li>anyone who wants to build a simple analog distortion circuit</li>
+      </ul>
+
+      <p>
+        P.S I failed my electronics bachelor in the second term :D !
+      </p>
+    </div>
+
+    <div class="section">
+      <div>Requirements</div>
+      <div class="underline">------------</div>
+
+      <ul>
+        <li>basic computer skills</li>
+        <li>laptop with KiCad installed</li>
+        <li>optional: git if you want to clone the repository</li>
+        <li>optional later: soldering iron, solder, side cutters, and a multimeter</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div>Material</div>
+      <div class="underline">--------</div>
+
+      <p>
+        We use a simple Fuzz Face style circuit with:
+      </p>
+
+      <ul>
+        <li>2 x AC128 or similar PNP germanium transistors</li>
+        <li>4 resistors: 33k, 100k, 470 Ohm, 8.2k</li>
+        <li>3 capacitors: 2.2uF, 20uF or 22uF, 0.01uF</li>
+        <li>1 x 1k (Lin) potentiometer for fuzz</li>
+        <li>1 x 500k (Log) potentiometer for volume</li>
+        <li>1 x 9V battery</li>
+        <li>2 x audio jacks</li>
+        <li>wire connections for off-board parts</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div>Estimated expenses</div>
+      <div class="underline">------------------</div>
+
+      <p>
+        Very roughly:
+      </p>
+
+      <ul>
+        <li>basic components: about 15 - 20 EUR</li>
+        <li>AC128 transistors: about 5 - 10 EUR</li>
+        <li>PCB manufacturing: about 5 - 10 EUR + shipping</li>
+        <li>optional: enclosure, footswitch, knobs, etc.: extra expenses</li>
+      </ul>
+
+      <p>
+        So for a simple workshop build, the total is often somewhere around:
+      </p>
+
+      <p>
+        20 - 40 EUR.
+      </p>
+    </div>
+
+    <div class="section">
+      <div>Workshop content</div>
+      <div class="underline">----------------</div>
+
+      <p>
+        Part I: schematic editor
+      </p>
+      <ul>
+        <li>create a project</li>
+        <li>place components</li>
+        <li>wire the circuit</li>
+      </ul>
+
+      <p>
+        Part II: simulation
+      </p>
+      <ul>
+        <li>DC operating point analysis</li>
+        <li>transient analysis</li>
+        <li>FFT / frequency content analysis</li>
+      </ul>
+
+      <p>
+        Part III: PCB editor
+      </p>
+      <ul>
+        <li>assign footprints</li>
+        <li>place components</li>
+        <li>route tracks</li>
+
+      </ul>
+
+      <p>
+        Part IV: fabrication output
+      </p>
+      <ul>
+        <li>export Gerber files</li>
+        <li>export drill files</li>
+        <li>check the output</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div>What we will learn</div>
+      <div class="underline">-------------------</div>
+
+      <ul>
+        <li>how to create a schematic in KiCad</li>
+        <li>how to simulate a circuit with SPICE</li>
+        <li>how to assign footprints and design a simple PCB</li>
+        <li>how to prepare manufacturing files</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div>How we want to learn together</div>
+      <div class="underline">---------------</div
+
+
+      <p>
+        I would love this to be a friendly and welcoming environment where everyone feels
+        free to ask questions, try things out, and make mistakes without fear of judgment.
+        No one is expected to already know anything. Questions are welcome at any point,
+        and there is no such thing as a "stupid" question. Let us look out for each other,
+        check in with each other, and offer help when it seems wanted or needed. Please be
+        mindful of how much space you take up, especially if you are already more
+        experienced or used to technical spaces and technical language. Sharing knowledge is
+        great, but it should support people rather than make them feel small.
+      </p>
+
+      <p>
+        P.S. This is my first workshop, so I am learning alongside you in some ways. I will
+        try my best to guide us through this, but I also appreciate your patience if something
+        takes a moment, if I am puzzled myself, or if we need to figure things out together
+        as a group :)
+      </p>
+
+      <p>
+        P.P.S The content of this workshop is fully self-contained and available online.
+        Meaning accessible for everyone for free :)
+      </p>
+    </div>
+
+    <div class="section">
+      <div>Disclaimer</div>
+      <div class="underline">----------</div>
+
+      <p>
+        This workshop is a learning project. Before ordering or soldering a real PCB,
+        always double-check footprints, transistor pinout, capacitor polarity,
+        track routing, ground connections, and the exported Gerber files.
+      </p>
+    </div>
+
+    <div class="section small">
+      <p>
+        End of file.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
